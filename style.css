@@ -1,0 +1,17 @@
+canvas {
+  width: 800px; /* 캔버스 가로크기 <- 바꾸면 js파일에서도 바꿔야함 */
+  height: 800px; /* 캔버스 세로크기 <- 바꾸면 js파일에서도 바꿔야함 */
+  border: 5px solid black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
