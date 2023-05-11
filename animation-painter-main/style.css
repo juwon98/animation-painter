@@ -1,0 +1,43 @@
+canvas {
+  width: 800px; /* 캔버스 가로크기 <- 바꾸면 js파일에서도 바꿔야함 */
+  height: 600px; /* 캔버스 세로크기 <- 바꾸면 js파일에서도 바꿔야함 */
+  border: 5px solid black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.color-options {
+  position: relative;
+  margin-bottom: 20px;
+}
+.controls button, .controls input[type="file"] {
+  margin-bottom: 30px;
+}
