@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <canvas></canvas>
-      <div class="controls">
-        <button id="mode-btn">Change to Fill</button>
-        <button id="destroy-btn">Destroy</button>
-        <button id="eraser-btn">Eraser</button>
-        <input type="file" accept="image/*" id="file" />
-        <input type="text" placeholder="Write and then double click" id="text" />
-        <button id="save-btn">Save Image</button>
+    <div class="main-container">
+      <div class="leftcontainer">
+        <!-- 여기에 왼쪽 컨테이너의 내용(애니메이션 부분) -->
+      </div>
+  
+      <div class="animation-container">
+          <canvas></canvas>
+          <div class="controls">
+            <button id="mode-btn">Change to Fill</button>
+            <button id="destroy-btn">Destroy</button>
+            <button id="eraser-btn">Eraser</button>
+            <input type="file" accept="image/*" id="file" />
+            <input type="text" placeholder="Write and then double click" id="text" />
+            <button id="save-btn">Save Image</button>
+          </div>
       </div>
     </div>
+ 
 
       
       <div class="color-options" style="display: flex">
