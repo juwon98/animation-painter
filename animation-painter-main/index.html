@@ -8,12 +8,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main-container">
-      <div class="leftcontainer">
-        <!-- 여기에 왼쪽 컨테이너의 내용(애니메이션 부분) -->
-      </div>
-  
-      <div class="animation-container">
+    <!--leftcontainer 삭제, 이후 메인 컨테이너 필요없어서 삭제-->
+    <div class="animation-container">   
           <canvas></canvas>
           <div class="controls">
             <button id="mode-btn">Change to Fill</button>
@@ -22,12 +18,10 @@
             <input type="file" accept="image/*" id="file" />
             <input type="text" placeholder="Write and then double click" id="text" />
             <button id="save-btn">Save Image</button>
-          </div>
-      </div>
+            <button id="HTMLlink-btn" onclick="window.open('Animation-Studio.html')"; >Make Animation</button>
+          </div>                    
     </div>
- 
 
-      
       <div class="color-options" style="display: flex">
         <!--색상 선택, color picker도 포함-->
         <!--이 아래는 편의를 위한 적당한 색상 프리셋임-->
