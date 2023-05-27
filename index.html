@@ -4,17 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meme Maker</title>
+    <title>Canvas Painter</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas></canvas>
-    <input id="line-width" type="range" min="1" max="10" value="5" step="0.1" />
-    <!--펜굵기-->
+    <!--leftcontainer 삭제, 이후 메인 컨테이너 필요없어서 삭제-->
+    <div class="main-container">
+      <canvas></canvas>
+      <div class="controls">
+        <button id="mode-btn">Change to Fill</button>
+        <button id="destroy-btn">Destroy</button>
+        <button id="eraser-btn">Eraser</button>
+        <label for="file" class="file-label">
+          Upload Image
+          <input type="file" accept="image/*" id="file" />
+        </label>
+        <input
+          type="text"
+          placeholder="Write and then double click"
+          id="text-insert"
+        />
+        <button id="save-btn">Save Image</button>
+        <button
+          id="HTMLlink-btn"
+          onclick="window.open('Animation-Studio.html')"
+          ;
+        >
+          Make Animation
+        </button>
+      </div>
+    </div>
+
     <div class="color-options">
-      <input type="color" id="color" />
       <!--색상 선택, color picker도 포함-->
       <!--이 아래는 편의를 위한 적당한 색상 프리셋임-->
+      <input
+        id="line-width"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+        step="0.1"
+      />
+      <!--펜굵기-->
+      <div>
+        <input type="color" id="color" />
+      </div>
       <div
         class="color-option"
         style="background-color: #1abc9c"
@@ -76,18 +111,6 @@
         data-color="#e67e22"
       ></div>
     </div>
-    <button id="mode-btn">Change to Fill</button>
-    <!--그리기&색칠 모드변환 버튼-->
-    <button id="destroy-btn">Destroy</button>
-    <!--전체지우기 버튼-->
-    <button id="eraser-btn">Eraser</button>
-    <!--지우개버튼 (펜이랑 똑같이 굵기조절가능)-->
-    <input type="file" accept="image/*" id="file" />
-    <!--이미지파일만 선택가능, 파일 선택시 캔버스크기에 맞춰 이미지가 그려짐-->
-    <input type="text" placeholder="Write and then double click" id="text" />
-    <!--텍스트 입력후 캔버스를 더블클릭하면 텍스트가 써짐 (현재 오류가 있어서 수정해야함)-->
-    <button id="save-btn">Save Image</button>
-    <!--이미지 저장버튼 (클릭후 이름 입력시 컴퓨터의 '다운로드' 폴더에 png파일로 저장됨)-->
     <script src="app.js"></script>
   </body>
 </html>

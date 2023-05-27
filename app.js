@@ -13,7 +13,7 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 const CANVAS_WIDTH = 800; // 캔버스 가로크기 <- 바꾸면 css에서도 바꺼야함
-const CANVAS_HEIGHT = 800; // 캔버스 세로크기 <- 바꾸면 css에서도 바꺼야함
+const CANVAS_HEIGHT = 600; // 캔버스 세로크기 <- 바꾸면 css에서도 바꺼야함
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
 ctx.lineWidth = lineWidth.value;
@@ -70,6 +70,7 @@ function onCanvasClick() {
 
 function onDestroyClick() {
   ctx.save();
+  /* clearRect는 이미지를 저장할때 흰색의 배경색이 없어지기 때문에 fillRect로 흰색으로 덮음*/
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.restore();
@@ -96,7 +97,7 @@ function onDoubleClick(event) {
   if (text !== "") {
     ctx.save();
     ctx.lineWidth = 1;
-    ctx.font = "68px 'Press Start 2P'";
+    ctx.font = "68px sans-serif";
     ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();
   }
@@ -117,8 +118,9 @@ function onSaveClick() {
 
 ctx.fillStyle = "white";
 ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+ctx.fillStyle = "black";
 
-canvas.addEventListener("dbclick", onDoubleClick);
+canvas.addEventListener("dblclick", onDoubleClick);
 canvas.addEventListener("click", onCanvasClick);
 canvas.addEventListener("mousemove", onMouseMove);
 canvas.addEventListener("mousedown", startPainting);
@@ -135,3 +137,5 @@ destroyBtn.addEventListener("click", onDestroyClick);
 eraserBtn.addEventListener("click", onEraserClick);
 fileInput.addEventListener("change", onFileChange);
 saveBtn.addEventListener("click", onSaveClick);
+
+//여기서부터 왼쪽 컨테이너 js
